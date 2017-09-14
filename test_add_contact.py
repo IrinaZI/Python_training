@@ -16,16 +16,15 @@ class test_add_contact(unittest.TestCase):
     
     def test_test_add_contact(self):
         wd = self.wd
-        # open home page
-        wd.get("http://localhost/addressbook/")
-        # Login
-        wd.find_element_by_name("user").click()
-        wd.find_element_by_name("user").clear()
-        wd.find_element_by_name("user").send_keys("admin")
-        wd.find_element_by_name("pass").click()
-        wd.find_element_by_name("pass").clear()
-        wd.find_element_by_name("pass").send_keys("secret")
-        wd.find_element_by_xpath("//form[@id='LoginForm']/input[3]").click()
+        self.open_home_page(wd)
+        self.Login(wd)
+        self.create_contact(wd)
+        self.logout(wd)
+
+    def logout(self, wd):
+        wd.find_element_by_link_text("Logout").click()
+
+    def create_contact(self, wd):
         # init contact creation
         wd.find_element_by_link_text("add new").click()
         # fill contact form
@@ -74,19 +73,21 @@ class test_add_contact(unittest.TestCase):
         wd.find_element_by_name("homepage").click()
         wd.find_element_by_name("homepage").clear()
         wd.find_element_by_name("homepage").send_keys("fsfsfsfs")
-        if not wd.find_element_by_xpath("//div[@id='content']/form/select[1]//option[1]").is_selected():
-            wd.find_element_by_xpath("//div[@id='content']/form/select[1]//option[1]").click()
-        if not wd.find_element_by_xpath("//div[@id='content']/form/select[1]//option[20]").is_selected():
-            wd.find_element_by_xpath("//div[@id='content']/form/select[1]//option[20]").click()
-        if not wd.find_element_by_xpath("//div[@id='content']/form/select[2]//option[4]").is_selected():
-            wd.find_element_by_xpath("//div[@id='content']/form/select[2]//option[4]").click()
+        wd.find_element_by_name("bday").click()
+        wd.find_element_by_name("bday").is_selected()
+        wd.find_element_by_name("bday").send_keys("3")
+        wd.find_element_by_name("bmonth").click()
+        wd.find_element_by_name("bmonth").is_selected()
+        wd.find_element_by_name("bmonth").send_keys("March")
         wd.find_element_by_name("byear").click()
         wd.find_element_by_name("byear").clear()
         wd.find_element_by_name("byear").send_keys("1979")
-        if not wd.find_element_by_xpath("//div[@id='content']/form/select[3]//option[12]").is_selected():
-            wd.find_element_by_xpath("//div[@id='content']/form/select[3]//option[12]").click()
-        if not wd.find_element_by_xpath("//div[@id='content']/form/select[4]//option[10]").is_selected():
-            wd.find_element_by_xpath("//div[@id='content']/form/select[4]//option[10]").click()
+        wd.find_element_by_name("aday").click()
+        wd.find_element_by_name("aday").is_selected()
+        wd.find_element_by_name("aday").send_keys("10")
+        wd.find_element_by_name("amonth").click()
+        wd.find_element_by_name("amonth").is_selected()
+        wd.find_element_by_name("amonth").send_keys("September")
         wd.find_element_by_name("ayear").click()
         wd.find_element_by_name("ayear").clear()
         wd.find_element_by_name("ayear").send_keys("2017")
@@ -101,10 +102,19 @@ class test_add_contact(unittest.TestCase):
         wd.find_element_by_name("notes").send_keys("sdfsdfsdfdsf")
         # submit group creation
         wd.find_element_by_xpath("//div[@id='content']/form/input[21]").click()
-        # logout
-        wd.find_element_by_link_text("Logout").click()
 
-    
+    def Login(self, wd):
+        wd.find_element_by_name("user").click()
+        wd.find_element_by_name("user").clear()
+        wd.find_element_by_name("user").send_keys("admin")
+        wd.find_element_by_name("pass").click()
+        wd.find_element_by_name("pass").clear()
+        wd.find_element_by_name("pass").send_keys("secret")
+        wd.find_element_by_xpath("//form[@id='LoginForm']/input[3]").click()
+
+    def open_home_page(self, wd):
+        wd.get("http://localhost/addressbook/")
+
     def tearDown(self):
         self.wd.quit()
 

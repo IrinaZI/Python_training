@@ -17,31 +17,29 @@ class test_add_contact(unittest.TestCase):
         self.wd.implicitly_wait(60)
     
     def test_add_contact(self):
-        wd = self.wd
-        self.open_home_page(wd)
-        self.Login(wd, username="admin", password="secret")
-        self.create_contact(wd, Contact (Firstname="First", Middlename="Middle", Lastname="Last", Nickname="Nick", Title="Title",
+        self.Login(username="admin", password="secret")
+        self.create_contact(Contact (Firstname="First", Middlename="Middle", Lastname="Last", Nickname="Nick", Title="Title",
                             Company="Company", Address="Address", Home="11231414",Mobile="123123123", Work="143432423",
                             Fax="345", Email="ewrwer", Email2="weteww", Email3="ytrrrr", Homepage="fsfsfsfs",
                             Bday="3", Bmonth="March", Byear="1979", Aday="10", Amonth="September", Ayear="2017",
                             Address2="sdfsdfdfsd", Phone2="dfsdfsds", Notes="sdfsdfsdfdsf"))
-        self.logout(wd)
+        self.logout()
 
     def test_add_empty_contact(self):
-        wd = self.wd
-        self.open_home_page(wd)
-        self.Login(wd, username="admin", password="secret")
-        self.create_contact(wd, Contact(Firstname="", Middlename="", Lastname="", Nickname="", Title="",
+        self.Login( username="admin", password="secret")
+        self.create_contact( Contact(Firstname="", Middlename="", Lastname="", Nickname="", Title="",
                             Company="", Address="", Home="",Mobile="", Work="",
                             Fax="", Email="", Email2="", Email3="", Homepage="",
                             Bday="", Bmonth="", Byear="", Aday="", Amonth="", Ayear="",
                             Address2="", Phone2="", Notes=""))
-        self.logout(wd)
+        self.logout()
 
-    def logout(self, wd):
+    def logout(self):
+        wd = self.wd
         wd.find_element_by_link_text("Logout").click()
 
-    def create_contact(self, wd, contact):
+    def create_contact(self, contact):
+        wd = self.wd
         # init contact creation
         wd.find_element_by_link_text("add new").click()
         # fill contact form
@@ -120,7 +118,9 @@ class test_add_contact(unittest.TestCase):
         # submit group creation
         wd.find_element_by_xpath("//div[@id='content']/form/input[21]").click()
 
-    def Login(self, wd, username, password):
+    def Login(self, username, password):
+        wd = self.wd
+        self.open_home_page()
         wd.find_element_by_name("user").click()
         wd.find_element_by_name("user").clear()
         wd.find_element_by_name("user").send_keys(username)
@@ -129,7 +129,8 @@ class test_add_contact(unittest.TestCase):
         wd.find_element_by_name("pass").send_keys(password)
         wd.find_element_by_xpath("//form[@id='LoginForm']/input[3]").click()
 
-    def open_home_page(self, wd):
+    def open_home_page(self):
+        wd = self.wd
         wd.get("http://localhost/addressbook/")
 
     def tearDown(self):

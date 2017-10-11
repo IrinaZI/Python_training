@@ -165,7 +165,8 @@ class ContactHelper:
 
     def open_contact_page(self):
         wd = self.app.wd
-        wd.find_element_by_link_text("home").click()
+        if not (wd.current_url.endswith("http://localhost/addressbook/") and wd.find_element_by_xpath("//div/div[1]/form/b").text == ("+username+")):
+           wd.find_element_by_link_text("home").click()
 
     def return_home_page(self):
         wd = self.app.wd

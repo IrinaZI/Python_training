@@ -20,9 +20,10 @@ class Application:
             return False
 
 
-    def open_home_page(self):
+    def open_login_page(self):
         wd = self.wd
-        wd.get("http://localhost/addressbook/")
+        if not (wd.current_url.endswith("http://localhost/addressbook/") and wd.find_element_by_id("LoginForm")):
+            wd.get("http://localhost/addressbook/")
 
 
     def destroy (self):

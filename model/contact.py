@@ -3,7 +3,7 @@ class Contact:
 
     def __init__(self, Firstname=None, Middlename=None, Lastname=None, Nickname=None, Title=None, Company=None, Address=None, Home=None, Mobile=None, Work=None,
                        Fax=None, Email=None, Email2=None, Email3=None, Homepage=None, Bday=None, Bmonth=None, Byear=None, Aday=None, Amonth=None, Ayear=None, Address2=None, Phone2=None,
-                       Notes=None, id=None, all_phones_from_home_page=None):
+                       Notes=None, id=None, all_phones_from_home_page=None, all_address_from_home_page=None, all_emails=None):
         self.Firstname = Firstname
         self.Middlename = Middlename
         self.Lastname = Lastname
@@ -30,6 +30,8 @@ class Contact:
         self.Notes = Notes
         self.id = id
         self.all_phones_from_home_page = all_phones_from_home_page
+        self.all_address_from_home_page = all_address_from_home_page
+        self.all_emails=all_emails
 
     def __eq__(self, other):
            return (self.id is None or other.id is None or self.id == other.id) and self.Firstname == other.Firstname and self.Lastname == other.Lastname

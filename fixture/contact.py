@@ -217,10 +217,9 @@ class ContactHelper:
                  cells = (element.find_elements_by_tag_name("td"))
                  lname = cells[1].text
                  fname = cells[2].text
-                 all_phones = cells[5].text.splitlines()
-                 #print (all_phones[0], all_phones[1], all_phones[2], all_phones[3])
-                 #
-                 self.contact_cache.append(Contact(id = id, Firstname = fname, Lastname = lname, Home = all_phones[0], Mobile = all_phones[1], Work = all_phones[2], Phone2 = all_phones[3]))
+                 all_phones = cells[5].text
+                 self.contact_cache.append(Contact(id = id, all_phones_from_home_page=all_phones,Firstname = fname,
+                                                   Lastname = lname))
         return list(self.contact_cache)
 
     def open_contact_to_edit_by_index(self, index):

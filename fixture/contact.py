@@ -183,12 +183,14 @@ class ContactHelper:
         return len(wd.find_elements_by_name("selected[]"))
 
 
-    def modify_contact_by_index(self, new_contact_data, index):
+    def modify_contact_by_index(self, new_contact_data, index,):
          wd = self.app.wd
          self.open_contact_page()
          self.select_contact_by_index(index)
         # open modification form
-         wd.find_element_by_xpath("//table[@id='maintable']/tbody/tr[2]/td[8]/a/img").click()
+         t_index = str (index+2)
+         xpath_temp="//table[@id='maintable']/tbody/tr["+t_index+"]/td[8]/a/img"
+         wd.find_element_by_xpath(xpath_temp).click()
         # fill contact form
          self.fill_contact_form(new_contact_data)
        # submit modification

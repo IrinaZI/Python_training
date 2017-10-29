@@ -2,7 +2,7 @@ from model.contact import Contact
 import random
 import string
 import os.path
-import json
+import jsonpickle
 import getopt
 import sys
 
@@ -29,7 +29,7 @@ def random_number(prefix, maxlen):
     symbols = string.punctuation + "" + string.digits*40
     return prefix + "".join([random.choice(symbols) for i in range(random.randrange(maxlen))])
 
-data_cont = [Contact(Firstname=random_string("First", 10), Middlename=random_string("Middle", 10),
+testdata = [Contact(Firstname=random_string("First", 10), Middlename=random_string("Middle", 10),
                          Lastname=random_string("Last", 10),
                          Nickname=random_string("Nick", 8), Title=random_string("Title", 15),
                          Company=random_string("Company", 20),
@@ -45,5 +45,6 @@ data_cont = [Contact(Firstname=random_string("First", 10), Middlename=random_str
 
 file = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", f)
 
-with open(file, "w") as outcontact:
-    outcontact.write(json.dumps(data_cont, default=lambda x: x.__dict__, indent=2))
+with open(file, "w") as out:
+    jsonpickle.set_encoder_options("json", indent=2)
+    out.write(jsonpickle.encode(testdata))

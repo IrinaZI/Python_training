@@ -2,6 +2,7 @@ import pytest
 import json
 import os.path
 import importlib
+import jsonpickle
 from fixture.application import Application
 from fixture.db import DbFixture
 
@@ -21,7 +22,7 @@ def app(request):
     global fixture
    # global target
     browser = request.config.getoption("--browser")
-    web_config = load_config(request.config.getoption("--target")) ['web']
+    web_config = load_config(request.config.getoption("--target"))['web']
    # if target is None:
       #  config_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), request.config.getoption("--target"))
       #  with open(config_file) as conf:
@@ -56,10 +57,16 @@ def pytest_addoption(parser):
 def pytest_generate_tests(metafunc):
     for fixture in metafunc.fixturenames:
         if fixture.startswith("date_"):
-            testdata = load_form_module(fixture[5:])
+            testdata = load_from_module(fixture[5:])
+            metafunc.parametrize(fixture, testdata, ids=[str(x) for x in testdata])
+        elif fixture.startswith("json_"):
+            testdata = load_from_json(fixture[5:])
             metafunc.parametrize(fixture, testdata, ids=[str(x) for x in testdata])
 
-def load_form_module(module):
+def load_from_module(module):
     return importlib.import_module("date.%s" % module).testdata
 
+def load_from_json(file):
+    with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "date/%s.json" % file)) as f:
+        return jsonpickle.decode(f.read())
 

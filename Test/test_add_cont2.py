@@ -4,8 +4,8 @@ from model.contact import Contact
 
 
 
-def test_add_contact(app, date_contacts):
-    contact=date_contacts
+def test_add_contact(app, json_contacts):
+    contact=json_contacts
     old_contacts = app.contact.get_contact_list()
     #contact = Contact (Firstname="First", Middlename="Middle", Lastname="Last", Nickname="Nick", Title="Title",
                         #Company="Company", Address="Address", Home="11231414", Mobile="123123123", Work="143432423",

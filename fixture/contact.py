@@ -171,7 +171,10 @@ class ContactHelper:
                  all_emails = cells[4].text
                  self.contact_cache.append(Contact(id = id, all_phones_from_home_page=all_phones, all_address_from_home_page=all_address,
                                                    all_emails=all_emails,  Firstname = fname, Lastname = lname))
+                 #print(self.contact_cache[1])
         return list(self.contact_cache)
+
+
 
     def open_contact_to_edit_by_index(self, index):
         wd = self.app.wd

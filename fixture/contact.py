@@ -1,4 +1,5 @@
 from model.contact import Contact
+import time
 import re
 
 class ContactHelper:
@@ -235,5 +236,7 @@ class ContactHelper:
         wd.find_element_by_name("group").click()
         wd.find_element_by_name("group").is_selected()
         wd.find_element_by_name("group").send_keys(group_name)
-        self.select_contact_by_id(contact_id)
+        wd.find_element_by_id("container").click()
+        wd.find_element_by_css_selector("input[value='%s']" % contact_id).click()
         wd.find_element_by_name("remove").click()
+

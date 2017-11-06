@@ -25,12 +25,6 @@ class ORMFixture:
         deprecated = Optional(datetime, column='deprecated')
         groups = Set(lambda: ORMFixture.ORMGroup, table='address_in_groups', column='group_id', reverse='contacts', lazy=True)
 
-
-    #class ORMCIG(db.Entity):
-        #_table_='address_in_groups'
-        #cid = PrimaryKey(int, column='id')
-        #gid = Optional(int, column='group_id')
-
     def __init__(self, host, name, user, password):
         conv = encoders
         conv.update(decoders)
@@ -71,10 +65,3 @@ class ORMFixture:
         orm_group = list(select(g for g in ORMFixture.ORMGroup if g.id == group.id))[0]
         return self.convert_contacts_to_model(
             select(c for c in ORMFixture.ORMContact if c.deprecated is None and orm_group not in c.groups))
-
-
-    #@db_session
-    #def get_cig(self):
-        #list(select(g for g in ORMFixture.ORMCIG))
-        #print (orm_cig)
-        #return self.convert_contacts_to_model(orm_group.contacts)

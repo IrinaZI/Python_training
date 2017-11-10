@@ -2,7 +2,6 @@ from pony.orm import *
 from datetime import datetime
 from model.group import Group
 from model.contact import Contact
-from pymysql.converters import decoders
 from pymysql.converters import encoders, decoders, convert_mysql_timestamp
 
 class ORMFixture:

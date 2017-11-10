@@ -5,7 +5,7 @@ import random
 
 
 
-def test_contact_in_group(app, db): #orm, check_ui
+def test_add_contact_in_group(app, db, check_ui):
     db = ORMFixture(host="127.0.0.1", name="addressbook", user="root", password="")
     if len (db.get_group_list()) == 0:
         app.group.create(Group(name='test'))
@@ -14,23 +14,13 @@ def test_contact_in_group(app, db): #orm, check_ui
     old_groups = db.get_group_list()
     gt = random.choice(old_groups)
     group_name=gt.name
-    group_id=gt.id
     old_contacts = db.get_contact_list()
     contact = random.choice(old_contacts)
     contact_id=contact.id
-    l1 = db.get_contacts_in_group(Group(id=int(group_id)))
     app.contact.add_contact_in_group(contact_id, group_name)
-    l2 = db.get_contacts_in_group(Group(id=int(group_id)))
-    assert l1 != l2
-    l3 = db.get_contacts_in_group(Group(id=int(group_id)))
-    app.contact.del_contact_from_group(contact_id, group_name)
-    l2 = db.get_contacts_in_group(Group(id=int(group_id)))
-    assert l3 != l2
+    new_contacts = db.get_contact_list()
+    assert sorted(old_contacts, key=Contact.id_or_max) == sorted(new_contacts, key=Contact.id_or_max)
+    if check_ui:
+        assert sorted(new_contacts, key=Contact.id_or_max) == sorted(app.contact.get_contact_list(),
 
-
-
-        #app.contact.del_contact_from_group(contact_id, group_name)
-
-
-    #if check_ui:
-        #assert sorted(new_groups, key = Group.id_or_max) == sorted(app.group.get_group_list(), key=Group.id_or_max)
+                                                                             key=Contact.id_or_max)

@@ -1,6 +1,7 @@
 import mysql.connector
 from model.group import Group
 from model.contact import Contact
+from model.relation import Relation
 
 
 class DbFixture:
@@ -21,6 +22,19 @@ class DbFixture:
             for row in cursor:
                 (id,name,header,footer) = row
                 list.append(Group (id=str(id), name = name, header = header, footer = footer))
+        finally:
+            cursor.close()
+        return list
+
+
+    def get_relations_list(self):
+        list = []
+        cursor = self.connection.cursor()
+        try:
+            cursor.execute('select id, group_id from address_in_groups')
+            for row in cursor:
+                (id, group_id) = row
+                list.append(Relation(id=id, group_id=group_id))
         finally:
             cursor.close()
         return list

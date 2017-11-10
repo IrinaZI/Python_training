@@ -240,3 +240,13 @@ class ContactHelper:
         wd.find_element_by_css_selector("input[value='%s']" % contact_id).click()
         wd.find_element_by_name("remove").click()
 
+
+    def remove_contact_from_group(self, id, group_id):
+        wd = self.app.wd
+        self.open_contact_page()
+        wd.find_element_by_xpath("//select[@name='group']").click()
+        wd.find_element_by_xpath("//select[@name='group']/option[@value='%s']" % group_id).click()
+        self.select_contact_by_id(id)
+        wd.find_element_by_xpath("//input[@name='remove']").click()
+        self.contact_cache = None
+

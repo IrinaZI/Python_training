@@ -1,5 +1,5 @@
 pytest
-selernium
+selenium
 jsonpickle
 pony
 pymysql

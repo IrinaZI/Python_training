@@ -230,7 +230,7 @@ class ContactHelper:
         wd.find_element_by_name("add").click()
 
 
-    def del_contact_from_group(self, contact_id, group_name):
+    def del_contact_from_group(self, contact_id, group_nayme):
         wd = self.app.wd
         self.open_contact_page()
         wd.find_element_by_name("group").click()

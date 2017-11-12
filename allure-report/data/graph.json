@@ -1,0 +1,51 @@
+[ {
+  "uid" : "db804c6457af5ec1",
+  "name" : "test_add_contact[First47$.:Lastz3;MiddleH ~ w[\"lY]",
+  "time" : {
+    "start" : 1510497770373,
+    "stop" : 1510497778013,
+    "duration" : 7640
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "9b69f15c67259654",
+  "name" : "test_add_contact[First4:Last* o*5 ;Middle]",
+  "time" : {
+    "start" : 1510497778013,
+    "stop" : 1510497786194,
+    "duration" : 8181
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "25e4f79946828e51",
+  "name" : "test_add_contact[First~:Last\"4#n;Middle*^ 1ru@N]",
+  "time" : {
+    "start" : 1510497740514,
+    "stop" : 1510497755366,
+    "duration" : 14852
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "b57fc9b473546e58",
+  "name" : "test_add_contact[FirstP_:Lastnr_;Middle]",
+  "time" : {
+    "start" : 1510497755368,
+    "stop" : 1510497762748,
+    "duration" : 7380
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "96ddc190d2ec7f7c",
+  "name" : "test_add_contact[First3:Lastl+;Middle.<~rTEG5?]",
+  "time" : {
+    "start" : 1510497762748,
+    "stop" : 1510497770373,
+    "duration" : 7625
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

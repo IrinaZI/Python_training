@@ -1,0 +1,122 @@
+{
+  "uid" : "b57fc9b473546e58",
+  "name" : "test_add_contact[FirstP_:Lastnr_;Middle]",
+  "fullName" : "Test.test_add_cont2.test_add_contact[FirstP_:Lastnr_;Middle]",
+  "historyId" : "1ecbc9fd6de6bf503d09ca8b696cde79",
+  "time" : {
+    "start" : 1510497755368,
+    "stop" : 1510497762748,
+    "duration" : 7380
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "statusDetails" : {
+    "flaky" : false
+  },
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Given a contact list",
+      "time" : {
+        "start" : 1510497755614,
+        "stop" : 1510497755616,
+        "duration" : 2
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "When I add a new contact FirstP_:Lastnr_;Middle to the list",
+      "time" : {
+        "start" : 1510497755616,
+        "stop" : 1510497762732,
+        "duration" : 7116
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Then the new contact list is equal to the old list with the added contact",
+      "time" : {
+        "start" : 1510497762732,
+        "stop" : 1510497762748,
+        "duration" : 16
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 3,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "host",
+    "value" : "Phiton64"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "thread",
+    "value" : "3972-MainThread"
+  }, {
+    "name" : "suite",
+    "value" : "Test.test_add_cont2"
+  }, {
+    "name" : "testClass",
+    "value" : "Test.test_add_cont2"
+  }, {
+    "name" : "testMethod",
+    "value" : "test_add_contact[FirstP_:Lastnr_;Middle]"
+  }, {
+    "name" : "package",
+    "value" : "Test.test_add_cont2"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "b57fc9b473546e58.json",
+  "statusDetailsSafe" : {
+    "flaky" : false
+  },
+  "statusMessage" : {
+    "present" : false
+  },
+  "parameterValues" : [ ]
+}

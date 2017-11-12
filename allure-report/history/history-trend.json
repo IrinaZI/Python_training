@@ -1,0 +1,34 @@
+[ {
+  "statistic" : {
+    "failed" : 3,
+    "broken" : 0,
+    "skipped" : 0,
+    "passed" : 2,
+    "unknown" : 0,
+    "total" : 5
+  },
+  "buildOrder" : 7,
+  "reportUrl" : "nulljob/test%20addressbook/7/allure",
+  "reportName" : "AllureReport"
+}, {
+  "statistic" : {
+    "failed" : 0,
+    "broken" : 0,
+    "skipped" : 0,
+    "passed" : 1,
+    "unknown" : 0,
+    "total" : 1
+  },
+  "buildOrder" : 6,
+  "reportUrl" : "nulljob/test%20addressbook/6/allure",
+  "reportName" : "AllureReport"
+}, {
+  "statistic" : {
+    "failed" : 0,
+    "broken" : 0,
+    "skipped" : 0,
+    "passed" : 0,
+    "unknown" : 0,
+    "total" : 0
+  }
+} ]

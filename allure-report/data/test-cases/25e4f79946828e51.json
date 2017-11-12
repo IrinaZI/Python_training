@@ -1,0 +1,146 @@
+{
+  "uid" : "25e4f79946828e51",
+  "name" : "test_add_contact[First~:Last\"4#n;Middle*^ 1ru@N]",
+  "fullName" : "Test.test_add_cont2.test_add_contact[First~:Last\"4#n;Middle*^ 1ru@N]",
+  "historyId" : "d0851c874b4083e2cfde33806d328864",
+  "time" : {
+    "start" : 1510497740514,
+    "stop" : 1510497755366,
+    "duration" : 14852
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusDetails" : {
+    "message" : "AssertionError: assert (14 + 1) == 14\n +  where 14 = len([1:1;None, New_name:2;None, New_name:4;None, New_name:5;None, FirstP_:Lastnr_;None, First3:Lastl+;None, ...])\n +  and   14 = len([1:1;None, New_name:2;None, New_name:4;None, New_name:5;None, FirstP_:Lastnr_;None, First3:Lastl+;None, ...])\n +    where [1:1;None, New_name:2;None, New_name:4;None, New_name:5;None, FirstP_:Lastnr_;None, First3:Lastl+;None, ...] = <bound method DbFixture.get_contact_list of <fixture.db.DbFixture object at 0x03B84890>>()\n +      where <bound method DbFixture.get_contact_list of <fixture.db.DbFixture object at 0x03B84890>> = <fixture.db.DbFixture object at 0x03B84890>.get_contact_list",
+    "trace" : "app = <fixture.application.Application object at 0x03B8A450>\ndb = <fixture.db.DbFixture object at 0x03B84890>\njson_contacts = First~:Last\"4#n;Middle*^ 1ru@N, check_ui = False\n\n    def test_add_contact(app, db, json_contacts, check_ui):\n        contact=json_contacts\n        with pytest.allure.step('Given a contact list'):\n            old_contacts = db.get_contact_list()\n        with pytest.allure.step('When I add a new contact %s to the list' % contact):\n            app.contact.create(contact)\n        with pytest.allure.step('Then the new contact list is equal to the old list with the added contact'):\n>           assert len(old_contacts) + 1 == len(db.get_contact_list())\nE           assert (14 + 1) == 14\nE            +  where 14 = len([1:1;None, New_name:2;None, New_name:4;None, New_name:5;None, FirstP_:Lastnr_;None, First3:Lastl+;None, ...])\nE            +  and   14 = len([1:1;None, New_name:2;None, New_name:4;None, New_name:5;None, FirstP_:Lastnr_;None, First3:Lastl+;None, ...])\nE            +    where [1:1;None, New_name:2;None, New_name:4;None, New_name:5;None, FirstP_:Lastnr_;None, First3:Lastl+;None, ...] = <bound method DbFixture.get_contact_list of <fixture.db.DbFixture object at 0x03B84890>>()\nE            +      where <bound method DbFixture.get_contact_list of <fixture.db.DbFixture object at 0x03B84890>> = <fixture.db.DbFixture object at 0x03B84890>.get_contact_list\n\nTest\\test_add_cont2.py:15: AssertionError",
+    "flaky" : false
+  },
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "failed",
+    "statusDetails" : {
+      "message" : "AssertionError: assert (14 + 1) == 14\n +  where 14 = len([1:1;None, New_name:2;None, New_name:4;None, New_name:5;None, FirstP_:Lastnr_;None, First3:Lastl+;None, ...])\n +  and   14 = len([1:1;None, New_name:2;None, New_name:4;None, New_name:5;None, FirstP_:Lastnr_;None, First3:Lastl+;None, ...])\n +    where [1:1;None, New_name:2;None, New_name:4;None, New_name:5;None, FirstP_:Lastnr_;None, First3:Lastl+;None, ...] = <bound method DbFixture.get_contact_list of <fixture.db.DbFixture object at 0x03B84890>>()\n +      where <bound method DbFixture.get_contact_list of <fixture.db.DbFixture object at 0x03B84890>> = <fixture.db.DbFixture object at 0x03B84890>.get_contact_list",
+      "trace" : "app = <fixture.application.Application object at 0x03B8A450>\ndb = <fixture.db.DbFixture object at 0x03B84890>\njson_contacts = First~:Last\"4#n;Middle*^ 1ru@N, check_ui = False\n\n    def test_add_contact(app, db, json_contacts, check_ui):\n        contact=json_contacts\n        with pytest.allure.step('Given a contact list'):\n            old_contacts = db.get_contact_list()\n        with pytest.allure.step('When I add a new contact %s to the list' % contact):\n            app.contact.create(contact)\n        with pytest.allure.step('Then the new contact list is equal to the old list with the added contact'):\n>           assert len(old_contacts) + 1 == len(db.get_contact_list())\nE           assert (14 + 1) == 14\nE            +  where 14 = len([1:1;None, New_name:2;None, New_name:4;None, New_name:5;None, FirstP_:Lastnr_;None, First3:Lastl+;None, ...])\nE            +  and   14 = len([1:1;None, New_name:2;None, New_name:4;None, New_name:5;None, FirstP_:Lastnr_;None, First3:Lastl+;None, ...])\nE            +    where [1:1;None, New_name:2;None, New_name:4;None, New_name:5;None, FirstP_:Lastnr_;None, First3:Lastl+;None, ...] = <bound method DbFixture.get_contact_list of <fixture.db.DbFixture object at 0x03B84890>>()\nE            +      where <bound method DbFixture.get_contact_list of <fixture.db.DbFixture object at 0x03B84890>> = <fixture.db.DbFixture object at 0x03B84890>.get_contact_list\n\nTest\\test_add_cont2.py:15: AssertionError",
+      "flaky" : false
+    },
+    "steps" : [ {
+      "name" : "Given a contact list",
+      "time" : {
+        "start" : 1510497747816,
+        "stop" : 1510497747819,
+        "duration" : 3
+      },
+      "status" : "passed",
+      "statusDetails" : {
+        "flaky" : false
+      },
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "When I add a new contact First~:Last\"4#n;Middle*^ 1ru@N to the list",
+      "time" : {
+        "start" : 1510497747819,
+        "stop" : 1510497755315,
+        "duration" : 7496
+      },
+      "status" : "passed",
+      "statusDetails" : {
+        "flaky" : false
+      },
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Then the new contact list is equal to the old list with the added contact",
+      "time" : {
+        "start" : 1510497755315,
+        "stop" : 1510497755320,
+        "duration" : 5
+      },
+      "status" : "failed",
+      "statusDetails" : {
+        "message" : "AssertionError: assert (14 + 1) == 14\n +  where 14 = len([1:1;None, New_name:2;None, New_name:4;None, New_name:5;None, FirstP_:Lastnr_;None, First3:Lastl+;None, ...])\n +  and   14 = len([1:1;None, New_name:2;None, New_name:4;None, New_name:5;None, FirstP_:Lastnr_;None, First3:Lastl+;None, ...])\n +    where [1:1;None, New_name:2;None, New_name:4;None, New_name:5;None, FirstP_:Lastnr_;None, First3:Lastl+;None, ...] = <bound method DbFixture.get_contact_list of <fixture.db.DbFixture object at 0x03B84890>>()\n +      where <bound method DbFixture.get_contact_list of <fixture.db.DbFixture object at 0x03B84890>> = <fixture.db.DbFixture object at 0x03B84890>.get_contact_list",
+        "trace" : "app = <fixture.application.Application object at 0x03B8A450>\ndb = <fixture.db.DbFixture object at 0x03B84890>\njson_contacts = First~:Last\"4#n;Middle*^ 1ru@N, check_ui = False\n\n    def test_add_contact(app, db, json_contacts, check_ui):\n        contact=json_contacts\n        with pytest.allure.step('Given a contact list'):\n            old_contacts = db.get_contact_list()\n        with pytest.allure.step('When I add a new contact %s to the list' % contact):\n            app.contact.create(contact)\n        with pytest.allure.step('Then the new contact list is equal to the old list with the added contact'):\n>           assert len(old_contacts) + 1 == len(db.get_contact_list())\nE           assert (14 + 1) == 14\nE            +  where 14 = len([1:1;None, New_name:2;None, New_name:4;None, New_name:5;None, FirstP_:Lastnr_;None, First3:Lastl+;None, ...])\nE            +  and   14 = len([1:1;None, New_name:2;None, New_name:4;None, New_name:5;None, FirstP_:Lastnr_;None, First3:Lastl+;None, ...])\nE            +    where [1:1;None, New_name:2;None, New_name:4;None, New_name:5;None, FirstP_:Lastnr_;None, First3:Lastl+;None, ...] = <bound method DbFixture.get_contact_list of <fixture.db.DbFixture object at 0x03B84890>>()\nE            +      where <bound method DbFixture.get_contact_list of <fixture.db.DbFixture object at 0x03B84890>> = <fixture.db.DbFixture object at 0x03B84890>.get_contact_list\n\nTest\\test_add_cont2.py:15: AssertionError",
+        "flaky" : false
+      },
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "stepsCount" : 0,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 3,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "host",
+    "value" : "Phiton64"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "thread",
+    "value" : "3972-MainThread"
+  }, {
+    "name" : "suite",
+    "value" : "Test.test_add_cont2"
+  }, {
+    "name" : "testClass",
+    "value" : "Test.test_add_cont2"
+  }, {
+    "name" : "testMethod",
+    "value" : "test_add_contact[First~:Last\"4#n;Middle*^ 1ru@N]"
+  }, {
+    "name" : "package",
+    "value" : "Test.test_add_cont2"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "25e4f79946828e51.json",
+  "statusDetailsSafe" : {
+    "message" : "AssertionError: assert (14 + 1) == 14\n +  where 14 = len([1:1;None, New_name:2;None, New_name:4;None, New_name:5;None, FirstP_:Lastnr_;None, First3:Lastl+;None, ...])\n +  and   14 = len([1:1;None, New_name:2;None, New_name:4;None, New_name:5;None, FirstP_:Lastnr_;None, First3:Lastl+;None, ...])\n +    where [1:1;None, New_name:2;None, New_name:4;None, New_name:5;None, FirstP_:Lastnr_;None, First3:Lastl+;None, ...] = <bound method DbFixture.get_contact_list of <fixture.db.DbFixture object at 0x03B84890>>()\n +      where <bound method DbFixture.get_contact_list of <fixture.db.DbFixture object at 0x03B84890>> = <fixture.db.DbFixture object at 0x03B84890>.get_contact_list",
+    "trace" : "app = <fixture.application.Application object at 0x03B8A450>\ndb = <fixture.db.DbFixture object at 0x03B84890>\njson_contacts = First~:Last\"4#n;Middle*^ 1ru@N, check_ui = False\n\n    def test_add_contact(app, db, json_contacts, check_ui):\n        contact=json_contacts\n        with pytest.allure.step('Given a contact list'):\n            old_contacts = db.get_contact_list()\n        with pytest.allure.step('When I add a new contact %s to the list' % contact):\n            app.contact.create(contact)\n        with pytest.allure.step('Then the new contact list is equal to the old list with the added contact'):\n>           assert len(old_contacts) + 1 == len(db.get_contact_list())\nE           assert (14 + 1) == 14\nE            +  where 14 = len([1:1;None, New_name:2;None, New_name:4;None, New_name:5;None, FirstP_:Lastnr_;None, First3:Lastl+;None, ...])\nE            +  and   14 = len([1:1;None, New_name:2;None, New_name:4;None, New_name:5;None, FirstP_:Lastnr_;None, First3:Lastl+;None, ...])\nE            +    where [1:1;None, New_name:2;None, New_name:4;None, New_name:5;None, FirstP_:Lastnr_;None, First3:Lastl+;None, ...] = <bound method DbFixture.get_contact_list of <fixture.db.DbFixture object at 0x03B84890>>()\nE            +      where <bound method DbFixture.get_contact_list of <fixture.db.DbFixture object at 0x03B84890>> = <fixture.db.DbFixture object at 0x03B84890>.get_contact_list\n\nTest\\test_add_cont2.py:15: AssertionError",
+    "flaky" : false
+  },
+  "statusMessage" : {
+    "present" : true
+  },
+  "parameterValues" : [ ]
+}

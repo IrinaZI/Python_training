@@ -1,0 +1,125 @@
+{
+  "d0851c874b4083e2cfde33806d328864" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "25e4f79946828e51",
+      "reportUrl" : "nulljob/test%20addressbook/7/allure/#testresult/25e4f79946828e51",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert (14 + 1) == 14\n +  where 14 = len([1:1;None, New_name:2;None, New_name:4;None, New_name:5;None, FirstP_:Lastnr_;None, First3:Lastl+;None, ...])\n +  and   14 = len([1:1;None, New_name:2;None, New_name:4;None, New_name:5;None, FirstP_:Lastnr_;None, First3:Lastl+;None, ...])\n +    where [1:1;None, New_name:2;None, New_name:4;None, New_name:5;None, FirstP_:Lastnr_;None, First3:Lastl+;None, ...] = <bound method DbFixture.get_contact_list of <fixture.db.DbFixture object at 0x03B84890>>()\n +      where <bound method DbFixture.get_contact_list of <fixture.db.DbFixture object at 0x03B84890>> = <fixture.db.DbFixture object at 0x03B84890>.get_contact_list",
+      "time" : {
+        "start" : 1510497740514,
+        "stop" : 1510497755366,
+        "duration" : 14852
+      }
+    } ]
+  },
+  "21c20d9ac2b61c67c0599eb802b803ea" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "96ddc190d2ec7f7c",
+      "reportUrl" : "nulljob/test%20addressbook/7/allure/#testresult/96ddc190d2ec7f7c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1510497762748,
+        "stop" : 1510497770373,
+        "duration" : 7625
+      }
+    } ]
+  },
+  "48d160010a2505d970b189656d605855" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "9b69f15c67259654",
+      "reportUrl" : "nulljob/test%20addressbook/7/allure/#testresult/9b69f15c67259654",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert (16 + 1) == 16\n +  where 16 = len([1:1;None, New_name:2;None, New_name:4;None, New_name:5;None, FirstP_:Lastnr_;None, First3:Lastl+;None, ...])\n +  and   16 = len([1:1;None, New_name:2;None, New_name:4;None, New_name:5;None, FirstP_:Lastnr_;None, First3:Lastl+;None, ...])\n +    where [1:1;None, New_name:2;None, New_name:4;None, New_name:5;None, FirstP_:Lastnr_;None, First3:Lastl+;None, ...] = <bound method DbFixture.get_contact_list of <fixture.db.DbFixture object at 0x03B84890>>()\n +      where <bound method DbFixture.get_contact_list of <fixture.db.DbFixture object at 0x03B84890>> = <fixture.db.DbFixture object at 0x03B84890>.get_contact_list",
+      "time" : {
+        "start" : 1510497778013,
+        "stop" : 1510497786194,
+        "duration" : 8181
+      }
+    } ]
+  },
+  "d929889a05a3073f7b50ffcf699885dc" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "84d5166bd1d33608",
+      "reportUrl" : "nulljob/test%20addressbook/6/allure/#testresult/84d5166bd1d33608",
+      "status" : "passed",
+      "time" : {
+        "start" : 1510497278770,
+        "stop" : 1510497289726,
+        "duration" : 10956
+      }
+    } ]
+  },
+  "4f29e6d948f3bda0ab0432deb51ca4ed" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "db804c6457af5ec1",
+      "reportUrl" : "nulljob/test%20addressbook/7/allure/#testresult/db804c6457af5ec1",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert (16 + 1) == 16\n +  where 16 = len([1:1;None, New_name:2;None, New_name:4;None, New_name:5;None, FirstP_:Lastnr_;None, First3:Lastl+;None, ...])\n +  and   16 = len([1:1;None, New_name:2;None, New_name:4;None, New_name:5;None, FirstP_:Lastnr_;None, First3:Lastl+;None, ...])\n +    where [1:1;None, New_name:2;None, New_name:4;None, New_name:5;None, FirstP_:Lastnr_;None, First3:Lastl+;None, ...] = <bound method DbFixture.get_contact_list of <fixture.db.DbFixture object at 0x03B84890>>()\n +      where <bound method DbFixture.get_contact_list of <fixture.db.DbFixture object at 0x03B84890>> = <fixture.db.DbFixture object at 0x03B84890>.get_contact_list",
+      "time" : {
+        "start" : 1510497770373,
+        "stop" : 1510497778013,
+        "duration" : 7640
+      }
+    } ]
+  },
+  "1ecbc9fd6de6bf503d09ca8b696cde79" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "b57fc9b473546e58",
+      "reportUrl" : "nulljob/test%20addressbook/7/allure/#testresult/b57fc9b473546e58",
+      "status" : "passed",
+      "time" : {
+        "start" : 1510497755368,
+        "stop" : 1510497762748,
+        "duration" : 7380
+      }
+    } ]
+  }
+}

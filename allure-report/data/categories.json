@@ -1,0 +1,53 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "name" : "categories",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "AssertionError: assert (14 + 1) == 14\n +  where 14 = len([1:1;None, New_name:2;None, New_name:4;None, New_name:5;None, FirstP_:Lastnr_;None, First3:Lastl+;None, ...])\n +  and   14 = len([1:1;None, New_name:2;None, New_name:4;None, New_name:5;None, FirstP_:Lastnr_;None, First3:Lastl+;None, ...])\n +    where [1:1;None, New_name:2;None, New_name:4;None, New_name:5;None, FirstP_:Lastnr_;None, First3:Lastl+;None, ...] = <bound method DbFixture.get_contact_list of <fixture.db.DbFixture object at 0x03B84890>>()\n +      where <bound method DbFixture.get_contact_list of <fixture.db.DbFixture object at 0x03B84890>> = <fixture.db.DbFixture object at 0x03B84890>.get_contact_list",
+      "children" : [ {
+        "name" : "test_add_contact[First~:Last\"4#n;Middle*^ 1ru@N]",
+        "uid" : "25e4f79946828e51",
+        "parentUid" : "22113d6ad995e6e1d5a9b8bf6df3f76b",
+        "status" : "failed",
+        "time" : {
+          "start" : 1510497740514,
+          "stop" : 1510497755366,
+          "duration" : 14852
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "22113d6ad995e6e1d5a9b8bf6df3f76b"
+    }, {
+      "name" : "AssertionError: assert (16 + 1) == 16\n +  where 16 = len([1:1;None, New_name:2;None, New_name:4;None, New_name:5;None, FirstP_:Lastnr_;None, First3:Lastl+;None, ...])\n +  and   16 = len([1:1;None, New_name:2;None, New_name:4;None, New_name:5;None, FirstP_:Lastnr_;None, First3:Lastl+;None, ...])\n +    where [1:1;None, New_name:2;None, New_name:4;None, New_name:5;None, FirstP_:Lastnr_;None, First3:Lastl+;None, ...] = <bound method DbFixture.get_contact_list of <fixture.db.DbFixture object at 0x03B84890>>()\n +      where <bound method DbFixture.get_contact_list of <fixture.db.DbFixture object at 0x03B84890>> = <fixture.db.DbFixture object at 0x03B84890>.get_contact_list",
+      "children" : [ {
+        "name" : "test_add_contact[First47$.:Lastz3;MiddleH ~ w[\"lY]",
+        "uid" : "db804c6457af5ec1",
+        "parentUid" : "f861b6f193b3524de907b7bb8c9675a4",
+        "status" : "failed",
+        "time" : {
+          "start" : 1510497770373,
+          "stop" : 1510497778013,
+          "duration" : 7640
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_add_contact[First4:Last* o*5 ;Middle]",
+        "uid" : "9b69f15c67259654",
+        "parentUid" : "f861b6f193b3524de907b7bb8c9675a4",
+        "status" : "failed",
+        "time" : {
+          "start" : 1510497778013,
+          "stop" : 1510497786194,
+          "duration" : 8181
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "f861b6f193b3524de907b7bb8c9675a4"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ]
+}

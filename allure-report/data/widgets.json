@@ -1,0 +1,101 @@
+{
+  "summary" : {
+    "reportName" : "Allure Report",
+    "testRuns" : [ ],
+    "statistic" : {
+      "failed" : 3,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 2,
+      "unknown" : 0,
+      "total" : 5
+    },
+    "time" : {
+      "start" : 1510497740514,
+      "stop" : 1510497786194,
+      "duration" : 45680,
+      "minDuration" : 7380,
+      "maxDuration" : 14852,
+      "sumDuration" : 45678
+    }
+  },
+  "environment" : [ ],
+  "suites" : {
+    "total" : 1,
+    "items" : [ {
+      "uid" : "524e7bb1436893d7fd920bea49d3a86c",
+      "name" : "Test.test_add_cont2",
+      "statistic" : {
+        "failed" : 3,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 5
+      }
+    } ]
+  },
+  "history-trend" : [ {
+    "statistic" : {
+      "failed" : 3,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 2,
+      "unknown" : 0,
+      "total" : 5
+    },
+    "buildOrder" : 7,
+    "reportUrl" : "nulljob/test%20addressbook/7/allure",
+    "reportName" : "AllureReport"
+  }, {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "buildOrder" : 6,
+    "reportUrl" : "nulljob/test%20addressbook/6/allure",
+    "reportName" : "AllureReport"
+  }, {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 0
+    }
+  } ],
+  "behaviors" : {
+    "total" : 5,
+    "items" : [ ]
+  },
+  "executors" : [ {
+    "name" : "Jenkins",
+    "type" : "jenkins",
+    "buildOrder" : 7,
+    "buildName" : "test addressbook #7",
+    "buildUrl" : "nulljob/test%20addressbook/7/",
+    "reportName" : "AllureReport",
+    "reportUrl" : "nulljob/test%20addressbook/7/allure"
+  } ],
+  "categories" : {
+    "total" : 1,
+    "items" : [ {
+      "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d",
+      "name" : "Product defects",
+      "statistic" : {
+        "failed" : 3,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 3
+      }
+    } ]
+  },
+  "launches" : [ ]
+}

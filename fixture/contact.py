@@ -230,7 +230,7 @@ class ContactHelper:
         wd.find_element_by_name("add").click()
 
 
-    def del_contact_from_group(self, contact_id, group_nayme):
+    def del_contact_from_group(self, contact_id, group_name):
         wd = self.app.wd
         self.open_contact_page()
         wd.find_element_by_name("group").click()
@@ -246,6 +246,7 @@ class ContactHelper:
         self.open_contact_page()
         wd.find_element_by_xpath("//select[@name='group']").click()
         wd.find_element_by_xpath("//select[@name='group']/option[@value='%s']" % group_id).click()
+        time.sleep(1)
         self.select_contact_by_id(id)
         wd.find_element_by_xpath("//input[@name='remove']").click()
         self.contact_cache = None

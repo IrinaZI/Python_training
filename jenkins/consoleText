@@ -1,0 +1,145 @@
+Started by user admin
+Building in workspace C:\Users\Phiton\.jenkins\workspace\addressbook tests 2
+Cloning the remote Git repository
+Cloning repository https://github.com/IrinaZI/Python_training
+ > C:\Users\Phiton\AppData\Local\GitHubDesktop\app-1.0.8\resources\app\git\cmd\git.exe init C:\Users\Phiton\.jenkins\workspace\addressbook tests 2 # timeout=10
+Fetching upstream changes from https://github.com/IrinaZI/Python_training
+ > C:\Users\Phiton\AppData\Local\GitHubDesktop\app-1.0.8\resources\app\git\cmd\git.exe --version # timeout=10
+ > C:\Users\Phiton\AppData\Local\GitHubDesktop\app-1.0.8\resources\app\git\cmd\git.exe fetch --tags --progress https://github.com/IrinaZI/Python_training +refs/heads/*:refs/remotes/origin/*
+ > C:\Users\Phiton\AppData\Local\GitHubDesktop\app-1.0.8\resources\app\git\cmd\git.exe config remote.origin.url https://github.com/IrinaZI/Python_training # timeout=10
+ > C:\Users\Phiton\AppData\Local\GitHubDesktop\app-1.0.8\resources\app\git\cmd\git.exe config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > C:\Users\Phiton\AppData\Local\GitHubDesktop\app-1.0.8\resources\app\git\cmd\git.exe config remote.origin.url https://github.com/IrinaZI/Python_training # timeout=10
+Fetching upstream changes from https://github.com/IrinaZI/Python_training
+ > C:\Users\Phiton\AppData\Local\GitHubDesktop\app-1.0.8\resources\app\git\cmd\git.exe fetch --tags --progress https://github.com/IrinaZI/Python_training +refs/heads/*:refs/remotes/origin/*
+ > C:\Users\Phiton\AppData\Local\GitHubDesktop\app-1.0.8\resources\app\git\cmd\git.exe rev-parse "refs/remotes/origin/master^{commit}" # timeout=10
+ > C:\Users\Phiton\AppData\Local\GitHubDesktop\app-1.0.8\resources\app\git\cmd\git.exe rev-parse "refs/remotes/origin/origin/master^{commit}" # timeout=10
+Checking out Revision dd7bc9dfc57982f0d493f989259b838d38d54ee9 (refs/remotes/origin/master)
+ > C:\Users\Phiton\AppData\Local\GitHubDesktop\app-1.0.8\resources\app\git\cmd\git.exe config core.sparsecheckout # timeout=10
+ > C:\Users\Phiton\AppData\Local\GitHubDesktop\app-1.0.8\resources\app\git\cmd\git.exe checkout -f dd7bc9dfc57982f0d493f989259b838d38d54ee9
+Commit message: "Allure report test_add_cont2"
+ > C:\Users\Phiton\AppData\Local\GitHubDesktop\app-1.0.8\resources\app\git\cmd\git.exe rev-list 2bbbd3ef96bb37d302e1704f21b9ef19e164858a # timeout=10
+[addressbook tests 2] $ cmd.exe /C "C:\Python36-32\python.exe C:\Users\Phiton\.jenkins\shiningpanda\jobs\26b00f70\virtualenv.py C:\Users\Phiton\.jenkins\shiningpanda\jobs\26b00f70\virtualenvs\d41d8cd9 && exit %%ERRORLEVEL%%"
+PYTHONHOME is set.  You *must* activate the virtualenv before using it
+Using base prefix 'C:\\Python36-32'
+New python executable in C:\Users\Phiton\.jenkins\shiningpanda\jobs\26b00f70\virtualenvs\d41d8cd9\Scripts\python.exe
+Installing setuptools, pip, wheel...done.
+[addressbook tests 2] $ cmd.exe /c call C:\Users\Phiton\AppData\Local\Temp\shiningpanda8268146987909571683.bat
+
+C:\Users\Phiton\.jenkins\workspace\addressbook tests 2>pip install -r requirements.txt 
+Collecting pytest (from -r requirements.txt (line 1))
+  Using cached pytest-3.2.3-py2.py3-none-any.whl
+Collecting selenium (from -r requirements.txt (line 2))
+  Using cached selenium-3.7.0-py2.py3-none-any.whl
+Collecting jsonpickle (from -r requirements.txt (line 3))
+Collecting pony (from -r requirements.txt (line 4))
+Collecting pymysql (from -r requirements.txt (line 5))
+  Using cached PyMySQL-0.7.11-py2.py3-none-any.whl
+Collecting mysql-connector-python-rf (from -r requirements.txt (line 6))
+Processing c:\users\phiton\.jenkins\workspace\addressbook tests 2\lxml-4.1.1-cp36-cp36m-win32.whl
+Collecting pytest-allure-adaptor (from -r requirements.txt (line 8))
+  Using cached pytest_allure_adaptor-1.7.9-py3-none-any.whl
+Requirement already satisfied: setuptools in c:\users\phiton\.jenkins\shiningpanda\jobs\26b00f70\virtualenvs\d41d8cd9\lib\site-packages (from pytest->-r requirements.txt (line 1))
+Collecting py>=1.4.33 (from pytest->-r requirements.txt (line 1))
+  Using cached py-1.4.34-py2.py3-none-any.whl
+Collecting colorama; sys_platform == "win32" (from pytest->-r requirements.txt (line 1))
+  Using cached colorama-0.3.9-py2.py3-none-any.whl
+Collecting six>=1.9.0 (from pytest-allure-adaptor->-r requirements.txt (line 8))
+  Using cached six-1.11.0-py2.py3-none-any.whl
+Collecting namedlist (from pytest-allure-adaptor->-r requirements.txt (line 8))
+Collecting enum34 (from pytest-allure-adaptor->-r requirements.txt (line 8))
+  Using cached enum34-1.1.6-py3-none-any.whl
+Installing collected packages: py, colorama, pytest, selenium, jsonpickle, pony, pymysql, mysql-connector-python-rf, lxml, six, namedlist, enum34, pytest-allure-adaptor
+Successfully installed colorama-0.3.9 enum34-1.1.6 jsonpickle-0.9.5 lxml-4.1.1 mysql-connector-python-rf-2.2.2 namedlist-1.7 pony-0.7.3 py-1.4.34 pymysql-0.7.11 pytest-3.2.3 pytest-allure-adaptor-1.7.9 selenium-3.7.0 six-1.11.0
+
+C:\Users\Phiton\.jenkins\workspace\addressbook tests 2>py.test --junitxml=results1.xml Test\test_add_cont2.py 
+============================= test session starts =============================
+platform win32 -- Python 3.6.3, pytest-3.2.3, py-1.4.34, pluggy-0.4.0
+rootdir: C:\Users\Phiton\.jenkins\workspace\addressbook tests 2, inifile:
+plugins: allure-adaptor-1.7.9
+collected 5 items
+
+Test\test_add_cont2.py F..FF
+
+ generated xml file: C:\Users\Phiton\.jenkins\workspace\addressbook tests 2\results1.xml 
+================================== FAILURES ===================================
+______________ test_add_contact[First~:Last"4#n;Middle*^ 1ru@N] _______________
+
+app = <fixture.application.Application object at 0x03B8FB30>
+db = <fixture.db.DbFixture object at 0x03B93CF0>
+json_contacts = First~:Last"4#n;Middle*^ 1ru@N, check_ui = False
+
+    def test_add_contact(app, db, json_contacts, check_ui):
+        contact=json_contacts
+        with pytest.allure.step('Given a contact list'):
+            old_contacts = db.get_contact_list()
+        with pytest.allure.step('When I add a new contact %s to the list' % contact):
+            app.contact.create(contact)
+        with pytest.allure.step('Then the new contact list is equal to the old list with the added contact'):
+>           assert len(old_contacts) + 1 == len(db.get_contact_list())
+E           assert (15 + 1) == 15
+E            +  where 15 = len([1:1;None, New_name:2;None, New_name:4;None, New_name:5;None, FirstP_:Lastnr_;None, First3:Lastl+;None, ...])
+E            +  and   15 = len([1:1;None, New_name:2;None, New_name:4;None, New_name:5;None, FirstP_:Lastnr_;None, First3:Lastl+;None, ...])
+E            +    where [1:1;None, New_name:2;None, New_name:4;None, New_name:5;None, FirstP_:Lastnr_;None, First3:Lastl+;None, ...] = <bound method DbFixture.get_contact_list of <fixture.db.DbFixture object at 0x03B93CF0>>()
+E            +      where <bound method DbFixture.get_contact_list of <fixture.db.DbFixture object at 0x03B93CF0>> = <fixture.db.DbFixture object at 0x03B93CF0>.get_contact_list
+
+Test\test_add_cont2.py:15: AssertionError
+_____________ test_add_contact[First47$.:Lastz3;MiddleH ~ w["lY] ______________
+
+app = <fixture.application.Application object at 0x03B8FB30>
+db = <fixture.db.DbFixture object at 0x03B93CF0>
+json_contacts = First47$.:Lastz3;MiddleH ~ w["lY, check_ui = False
+
+    def test_add_contact(app, db, json_contacts, check_ui):
+        contact=json_contacts
+        with pytest.allure.step('Given a contact list'):
+            old_contacts = db.get_contact_list()
+        with pytest.allure.step('When I add a new contact %s to the list' % contact):
+            app.contact.create(contact)
+        with pytest.allure.step('Then the new contact list is equal to the old list with the added contact'):
+>           assert len(old_contacts) + 1 == len(db.get_contact_list())
+E           assert (17 + 1) == 17
+E            +  where 17 = len([1:1;None, New_name:2;None, New_name:4;None, New_name:5;None, FirstP_:Lastnr_;None, First3:Lastl+;None, ...])
+E            +  and   17 = len([1:1;None, New_name:2;None, New_name:4;None, New_name:5;None, FirstP_:Lastnr_;None, First3:Lastl+;None, ...])
+E            +    where [1:1;None, New_name:2;None, New_name:4;None, New_name:5;None, FirstP_:Lastnr_;None, First3:Lastl+;None, ...] = <bound method DbFixture.get_contact_list of <fixture.db.DbFixture object at 0x03B93CF0>>()
+E            +      where <bound method DbFixture.get_contact_list of <fixture.db.DbFixture object at 0x03B93CF0>> = <fixture.db.DbFixture object at 0x03B93CF0>.get_contact_list
+
+Test\test_add_cont2.py:15: AssertionError
+_________________ test_add_contact[First4:Last* o*5 ;Middle] __________________
+
+app = <fixture.application.Application object at 0x03B8FB30>
+db = <fixture.db.DbFixture object at 0x03B93CF0>
+json_contacts = First4:Last* o*5 ;Middle, check_ui = False
+
+    def test_add_contact(app, db, json_contacts, check_ui):
+        contact=json_contacts
+        with pytest.allure.step('Given a contact list'):
+            old_contacts = db.get_contact_list()
+        with pytest.allure.step('When I add a new contact %s to the list' % contact):
+            app.contact.create(contact)
+        with pytest.allure.step('Then the new contact list is equal to the old list with the added contact'):
+>           assert len(old_contacts) + 1 == len(db.get_contact_list())
+E           assert (17 + 1) == 17
+E            +  where 17 = len([1:1;None, New_name:2;None, New_name:4;None, New_name:5;None, FirstP_:Lastnr_;None, First3:Lastl+;None, ...])
+E            +  and   17 = len([1:1;None, New_name:2;None, New_name:4;None, New_name:5;None, FirstP_:Lastnr_;None, First3:Lastl+;None, ...])
+E            +    where [1:1;None, New_name:2;None, New_name:4;None, New_name:5;None, FirstP_:Lastnr_;None, First3:Lastl+;None, ...] = <bound method DbFixture.get_contact_list of <fixture.db.DbFixture object at 0x03B93CF0>>()
+E            +      where <bound method DbFixture.get_contact_list of <fixture.db.DbFixture object at 0x03B93CF0>> = <fixture.db.DbFixture object at 0x03B93CF0>.get_contact_list
+
+Test\test_add_cont2.py:15: AssertionError
+===================== 3 failed, 2 passed in 41.50 seconds =====================
+
+C:\Users\Phiton\.jenkins\workspace\addressbook tests 2>py.test --junitxml=results2.xml Test\test_add_group.py 
+============================= test session starts =============================
+platform win32 -- Python 3.6.3, pytest-3.2.3, py-1.4.34, pluggy-0.4.0
+rootdir: C:\Users\Phiton\.jenkins\workspace\addressbook tests 2, inifile:
+plugins: allure-adaptor-1.7.9
+collected 6 items
+
+Test\test_add_group.py ......
+
+ generated xml file: C:\Users\Phiton\.jenkins\workspace\addressbook tests 2\results2.xml 
+========================== 6 passed in 15.10 seconds ==========================
+
+C:\Users\Phiton\.jenkins\workspace\addressbook tests 2>exit 0 
+Recording test results
+Build step 'Publish JUnit test result report' changed build result to UNSTABLE
+Finished: UNSTABLE
